@@ -60,7 +60,7 @@ app.get "/logout", checkAuth , (req, res) ->
 app.get '/', checkAuth, (req, res) ->
   res.render "index"
 
-app.get '/init', checkAuth, (req, res) ->
+app.get '/init', (req, res) ->
   # 数据初始化
   record = new Student {name: "黄欣", pass: "123"}
   record.save()
