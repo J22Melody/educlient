@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= "文学系教务系统"
+
+  body
+    h1= "文学系教务系统"
+    if (req.session.name)
+      p
+        ="你好"
+        span= req.session.name
+        ="。"
+        a(href="/logout")= "注销登录"
+    block content

@@ -1,0 +1,59 @@
+extends _base
+
+block content
+  style(link="stylesheets").
+    td{
+      text-align: center;
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+  select(id="select")
+    option(data-system="C")= "文学系"
+    option(data-system="A")= "软件学院"
+    option(data-system="B")= "数学系"
+
+  table
+    thead
+      tr
+        td= "课程编号"
+        td= "课程名"
+        td= "老师"
+        td= "地点"
+        td= "学分数"
+        td= "课时"
+        td= "操作"
+    tbody
+    for course in courses
+      tr
+        td= course.id
+        td= course.title
+        td= course.teacher
+        td= course.place
+        td= course.credit
+        td= course.period
+        td
+          if course.selected
+            a(href="/unselect/" + req.query.desSysId + "/" + course.id)= "退选"
+          else
+            a(href="/select/" + req.query.desSysId + "/" + course.id)= "选课"
+
+  script.
+    function getQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+    }
+
+    var currentSys = getQueryString('desSysId');
+    var select = document.querySelector('#select');
+    if(currentSys == 'A'){
+      select.selectedIndex = 1;
+    }else if(currentSys == 'B'){
+      select.selectedIndex = 2;
+    }
+
+    select.onchange = function(){
+      var selected = this.children[this.selectedIndex];
+      window.location.href = "/selectClass?desSysId=" + selected.getAttribute('data-system');
+    };

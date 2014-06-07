@@ -1,0 +1,61 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'dynamicHelpers',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'dynamicHelpers', null ]
+6 verbose cache add name=undefined spec="dynamicHelpers" args=["dynamicHelpers",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'dynamicHelpers',
+7 verbose parsed url   path: 'dynamicHelpers',
+7 verbose parsed url   href: 'dynamicHelpers' }
+8 silly lockFile 4e115d55-dynamicHelpers dynamicHelpers
+9 verbose lock dynamicHelpers /Users/jiangzifan/.npm/4e115d55-dynamicHelpers.lock
+10 silly lockFile 4e115d55-dynamicHelpers dynamicHelpers
+11 silly lockFile 4e115d55-dynamicHelpers dynamicHelpers
+12 verbose addNamed [ 'dynamicHelpers', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile e869155d-dynamicHelpers dynamicHelpers@
+15 verbose lock dynamicHelpers@ /Users/jiangzifan/.npm/e869155d-dynamicHelpers.lock
+16 silly addNameRange { name: 'dynamicHelpers', range: '*', hasData: false }
+17 verbose url raw dynamicHelpers
+18 verbose url resolving [ 'http://registry.cnpmjs.org/', './dynamicHelpers' ]
+19 verbose url resolved http://registry.cnpmjs.org/dynamicHelpers
+20 info trying registry request attempt 1 at 17:40:29
+21 http GET http://registry.cnpmjs.org/dynamicHelpers
+22 http 404 http://registry.cnpmjs.org/dynamicHelpers
+23 silly registry.get cb [ 404,
+23 silly registry.get   { server: 'nginx/1.4.1 (Ubuntu)',
+23 silly registry.get     date: 'Fri, 30 May 2014 09:40:30 GMT',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     'content-length': '51',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-powered-by': 'koa',
+23 silly registry.get     'x-readtime': '5' } ]
+24 silly lockFile e869155d-dynamicHelpers dynamicHelpers@
+25 silly lockFile e869155d-dynamicHelpers dynamicHelpers@
+26 error 404 'dynamicHelpers' is not in the npm registry.
+26 error 404 You should bug the author to publish it
+26 error 404 It was specified as a dependency of 'edu'
+26 error 404
+26 error 404 Note that you can also install from a
+26 error 404 tarball, folder, or http url, or git url.
+27 error System Darwin 13.2.0
+28 error command "node" "/usr/local/bin/npm" "install" "dynamicHelpers" "--save"
+29 error cwd /Users/jiangzifan/Desktop/educlient
+30 error node -v v0.10.26
+31 error npm -v 1.4.3
+32 error code E404
+33 verbose exit [ 1, true ]
