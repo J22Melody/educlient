@@ -62,15 +62,27 @@ app.get '/', checkAuth, (req, res) ->
 
 app.get '/init', (req, res) ->
   # 数据初始化
-  record = new Student {name: "黄欣", pass: "123"}
+  # record = new Student {name: "黄欣", pass: "123"}
+  # record.save()
+  # record = new Class {name: "中国现当代文学名著研讨", mentor: "王彬彬（教授）", place: "仙二-111", credit: "2", period: "12"}
+  # record.save()
+  # record = new Class {name: "中国古代文学名著研讨", mentor: "李琛博", place: "仙二-121", credit: "2", period: "16"}
+  # record.save()
+  # record = new Class {name: "大学语文", mentor: "揭英泽", place: "仙二-114", credit: "3", period: "18"}
+  # record.save()
+  # record = new Class {name: "阅读与写作", mentor: "李青翔", place: "仙二-111", credit: "6", period: "10"}
+  # record.save()
+  record = new Class {name: "中国古代思想史", mentor: "刘钦", place: "仙二-111", credit: "2", period: "12"}
   record.save()
-  record = new Class {name: "中国现当代文学名著研讨", mentor: "王彬彬（教授）", place: "仙二-111", credit: "2", period: "12"}
+  record = new Class {name: "秦汉史", mentor: "武黎嵩", place: "仙二-121", credit: "2", period: "16"}
   record.save()
-  record = new Class {name: "中国古代文学名著研讨", mentor: "李琛博", place: "仙二-121", credit: "2", period: "16"}
+  record = new Class {name: "文学作品赏析", mentor: "刘嘉", place: "仙二-114", credit: "3", period: "18"}
   record.save()
-  record = new Class {name: "大学语文", mentor: "揭英泽", place: "仙二-114", credit: "3", period: "18"}
+  record = new Class {name: "古文写作", mentor: "陈振宇", place: "仙二-111", credit: "6", period: "10"}
   record.save()
-  record = new Class {name: "阅读与写作", mentor: "李青翔", place: "仙二-111", credit: "6", period: "10"}
+  record = new Class {name: "中国古典文学的文化阐释", mentor: "巩本栋", place: "仙二-114", credit: "3", period: "18"}
+  record.save()
+  record = new Class {name: "《雷雨》和《牡丹亭》：剧本与演出", mentor: "陆炜", place: "仙二-111", credit: "6", period: "10"}
   record.save()
   res.render "index"
 
